@@ -29,19 +29,9 @@ print("Modifiying controlnet.py - Done")
 
 # Checkpoints
 download_file(
-    "https://huggingface.co/philz1337x/flat2DAnimerge_v45Sharp/resolve/main/flat2DAnimerge_v45Sharp.safetensors?download=true",
+    "https://huggingface.co/isaiahbjork/Realistic_Vision_V6.0_B1_noVAE/resolve/main/realisticVisionV60B1_v60B1VAE.safetensors?download=true",
     "models/Stable-diffusion",
-    "flat2DAnimerge_v45Sharp.safetensors"
-)
-download_file(
-    "https://huggingface.co/dantea1118/juggernaut_reborn/resolve/main/juggernaut_reborn.safetensors?download=true",
-    "models/Stable-diffusion",
-    "juggernaut_reborn.safetensors"
-)
-download_file(
-    "https://huggingface.co/philz1337x/epicrealism/resolve/main/epicrealism_naturalSinRC1VAE.safetensors?download=true",
-    "models/Stable-diffusion",
-    "epicrealism_naturalSinRC1VAE.safetensors"
+    "realisticVisionV60B1_v60B1VAE.safetensors"
 )
 
 # Upscaler Model

@@ -189,16 +189,16 @@ class Predictor(BasePredictor):
     def predict(
         self,
         image: Path = Input(description="input image"),
-        prompt: str = Input(description="Prompt", default="masterpiece, best quality, highres, <lora:more_details:0.5> <lora:SDXLrender_v2.0:1>"),
+        prompt: str = Input(description="Prompt", default="masterpiece, best quality, highres, real skin, mouth closed, <lora:more_details:0.5> <lora:SDXLrender_v2.0:1>"),
         negative_prompt: str = Input(description="Negative Prompt", default="(worst quality, low quality, normal quality:2) JuggernautNegative-neg"),
         scale_factor: float = Input(
             description="Scale factor", default=2
         ),
         dynamic: float = Input(
-            description="HDR, try from 3 - 9", ge=1, le=50, default=6
+            description="HDR, try from 3 - 9", ge=1, le=50, default=3
         ),
         creativity: float = Input(
-            description="Creativity, try from 0.3 - 0.9", ge=0, le=1, default=0.35
+            description="Creativity, try from 0.2 - 0.3", ge=0, le=1, default=0.26
         ),
         resemblance: float = Input(
             description="Resemblance, try from 0.3 - 1.6", ge=0, le=3, default=0.6
@@ -215,7 +215,7 @@ class Predictor(BasePredictor):
         ),
         sd_model: str = Input(
             description="Stable Diffusion model checkpoint",
-            choices=['epicrealism_naturalSinRC1VAE.safetensors [84d76a0328]', 'juggernaut_reborn.safetensors [338b85bc4f]', 'flat2DAnimerge_v45Sharp.safetensors'],
+            choices=['realisticVision_v6.0'],
             default="juggernaut_reborn.safetensors [338b85bc4f]",
         ),
         scheduler: str = Input(
